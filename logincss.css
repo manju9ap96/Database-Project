@@ -1,0 +1,13 @@
+body{
+background-image:url(download1.jpg);
+background-color: white;
+font-size: 20px;
+}
+
+div.lbox{
+
+	background-color: black;
+	width: 220px;
+	height: 290px;
+	opacity: 0.8
+}

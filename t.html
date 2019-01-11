@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#ddlPassport").change(function () {
+            if ($(this).val() == "N") {
+                $("#dvPassport").show();
+                $("#dvPassports").hide();
+            } else if ($(this).val() == "Y") {
+                $("#dvPassports").show();
+                $("#dvPassport").hide();
+            }
+
+        });
+    });
+</script>
+<body>
+    <center>
+        <form method="post" action="addland.php">
+            <fieldset>
+                <legend><p>ADD your Land details</p></legend>
+
+                <label class="field" for="ownerid">Owner id:</label><input type="varchar" value="<?php include_once('connect_db.php');echo $id?>" name=" ownerid"><br><br>
+                <label class="field" for="propertyid">House id:</label><input type="text" name="propertyid"></label><br><br>
+        <label class="field" for="houseloction">Land Location:</label></label><input type="text" value ="" name ="landlocation"><br><br>
+        
+        <p><label class="field" for="photos">Photos:</label><input type="file" name="images"><br><br></p>
+        <label class="field" for="area">Total area:</label><input type="varchar" name="area">   <br><br>    
+        
+        <label class="field" for="security">Security Deposit:</label><input type="varchar" name="advance" value="&#8377"><br><br>
+        <label class="field" for="rent">Rent:</label> <input type="varchar" name="rent" value="&#8377"><br><br>
+        <labe classs=field"for="submit"> </label><input type="button" name="back"  value="CANCEL" onclick="window.location.href='owner.php'"></form>
+            <input type="submit" name="ADD" value="ADD">
+
+    </center>
+<span>What to you What to do?</span>
+<select id="ddlPassport">
+<option value="none">Select </option>
+    <option value="N">Buy</option>
+    <option value="Y">Rent</option>
+</select>
+
+<div id="dvPassport" style="display: none">
+    Expecting Amount:
+    <input type="text" id="num" />
+</div>
+<div id="dvPassports">
+Advance:<input type="text" name="advance">
+<br>
+<br>
+Rent:<input type="text" name="rent">
+</div>
+
+</body>
+</html>

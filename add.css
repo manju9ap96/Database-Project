@@ -1,0 +1,21 @@
+fieldset{
+	width: 500px;
+}
+legend{
+	font-size: 30px;
+	color: green;
+}
+label.field{
+	text-align: right;
+	width: 120px;
+	float:left;
+
+}
+input.textbox{
+	width: 200px;
+	float: left;
+}
+fieldset{
+	clear: both;
+	padding: 5px;
+}
